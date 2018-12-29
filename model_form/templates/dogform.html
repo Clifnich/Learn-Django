@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Form</title>
+</head>
+<body>
+    <h1>This is our dog form page</h1>
+    <form action="{% url 'add-dog' %}" method="POST">
+        {% csrf_token %}
+        {{ modelform.as_p }}
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
